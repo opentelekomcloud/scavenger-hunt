@@ -1,5 +1,6 @@
 port: 5555
 debug: True
+server: 0.0.0.0 # or 127.0.0.1
 
 fragen:
   - q: Wieso ist die Banane krum?
