@@ -28,4 +28,4 @@ def item():
     return render_template("item.html")
     
 if __name__ == '__main__':
-    app.run(port=8000, debug=True)
+    app.run(port=config["port"], debug=config["debug"])
