@@ -17,9 +17,9 @@ challenge. It decomposes to three major parts:
 
 Requires Python 3. Virtual environment recommended.
 
-Install flask: `pip install flask`.
+Install Flask and YAML libs: `pip install flask pyyaml`.
 
-Configuring the project: All configuration options are listed in `config.yaml`.
+Configuring the project: All configuration options are listed in `config.yaml`. Configure webserver port and debug mode there.
 
 Run server: `python main.py`
 
