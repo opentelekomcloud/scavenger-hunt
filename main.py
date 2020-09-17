@@ -16,12 +16,16 @@ def index():
     fragen = config["fragen"]
 
     frage = next((i for i, f in enumerate(fragen) if f["s"] == secret), 0)
-    
+
+    debugmsg = ""
+    if config["debug"]:
+        debugmsg = "secret = '" + secret + "' fragen = " + str(fragen) + "frage #" + str(frage)
+
     return render_template("index.html",
                            thislevel=frage,
                            nextlevel=frage + 1,
                            aufgabe=fragen[frage]["q"],
-                           debug=("secret = '" + secret + "' fragen = " + str(fragen) + "frage #" + str(frage)))
+                           debug=debugmsg)
 
 @app.route("/item")
 def item():

@@ -1,4 +1,4 @@
-port: 5555
+port: 8000
 debug: True
 server: 0.0.0.0 # or 127.0.0.1
 
