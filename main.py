@@ -29,5 +29,5 @@ def item():
     
 if __name__ == '__main__':
     app.run(port=config["port"],
-            server=config["server"],
+            host=config["server"],
             debug=config["debug"])
