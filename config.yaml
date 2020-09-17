@@ -1,0 +1,15 @@
+port: 5555
+
+fragen:
+  - q: Wieso ist die Banane krum?
+    a: darum
+    s: AAA
+  - q: Wie hoch ist der Eiffelturm?
+    a: 120 Meter
+    s: BBB
+  - q: Wieso kann ich nicht einschlafen?
+    a: Wees ich ooch nich.
+    s: CCC
+  - q: Was habe ich da in meiner Tasche?
+    a: Jahaa, das wüssten auch andere gern
+    s: DDD
