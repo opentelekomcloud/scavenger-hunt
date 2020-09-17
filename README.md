@@ -1,7 +1,7 @@
 # scavenger-hunt
 
 OpenStack was founded as a project in 2010. For the occasion of its
-tenth anniversary, the Open telekom Cloud hosts a scavenger hunt. This
+tenth anniversary, the Open Telekom Cloud hosts a scavenger hunt. This
 repo hosts some code for the server for a website serving the
 challenge. It decomposes to three major parts:
 
