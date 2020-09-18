@@ -1,6 +1,8 @@
 port: 8000
-debug: True
+debug: False # True
 server: 0.0.0.0 # or 127.0.0.1
+tlscrt: /etc/letsencrypt/live/scav.vaxxcha.in/fullchain.pem
+tlskey: /etc/letsencrypt/live/scav.vaxxcha.in/privkey.pem
 
 fragen:
   - q: Wieso ist die Banane krum?
@@ -10,7 +12,7 @@ fragen:
     a: 120 Meter
     s: BBB
   - q: Wieso kann ich nicht einschlafen?
-    a: Wees ich ooch nich.
+    a: Wees ick ooch nich.
     s: CCC
   - q: Was habe ich da in meiner Tasche?
     a: Jahaa, das wüssten auch andere gern
