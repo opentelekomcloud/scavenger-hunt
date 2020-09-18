@@ -34,4 +34,5 @@ def item():
 if __name__ == '__main__':
     app.run(port=config["port"],
             host=config["server"],
-            debug=config["debug"])
+            debug=config["debug"],
+            ssl_context=(config["tlscrt"], config["tlskey"]))
