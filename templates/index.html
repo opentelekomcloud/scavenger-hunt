@@ -24,42 +24,28 @@
     </style>
   </head>
   <body>
-    <h1>Open Telekom Cloud &mdash; Scavenger Hunt</h1>
     <p>
-      <img src="static/openstack.png" style="float: left;">
-      Vor zehn Jahren, im Jahr 2010, begründete sich eines der heute
-      größten Cloud-Computing-Projekte: Um dieses runde Jubiläum zu
-      feiern, richtet die Open Telekom Cloud eine Schnitzeljagd aus,
-      die zu einer Rundreise durch wichtige Webseiten von Open Telekom
-      Cloud, OpenStack und damit verbundenen Projekten einlädt.
+      <b>You are currently on level {{thislevel}}.</b>
     </p>
     <p>
-      <img src="static/prize.png" style="float: right;">
-      Die Schnitzeljagd besteht aus zehn Leveln, jeweils einen für
-      jedes Jahr von OpenStack: Pro Runde ist eine Website aufzusuchen
-      und ein Codewort zu ermitteln. Jedes besteht jeweils aus drei
-      Buchstaben, die hier auf dieser Seite einzugeben sind. Mit dem
-      richtigen Code geht es mit dem nächsten Level weiter. Wer alle
-      zehn Level absolviert, gewinnt einen von 50 Preisen: 30 T-Shirts
-      der Open Telekom Cloud, 20 Hoodies, 10 Besuchstickets im
-      Rechenzentrum der Open Telekom Cloud und der Hauptgewinner
-      erhält einen Bahnfahrtschein nach Magdeburg, gültig innerhalb
-      Deutschlands. Die ersten 25 gelösten Schnitzeljagden kommen in
-      den Lostopf, weitere 25 werden ausgelost.
+      To proceed to the next level, solve this challenge, identify the
+      three checkpoint letters and enter the letters in this form. The
+      answer is case insensitive.
     </p>
+    {% if wronganswer is string %}
     <p>
-      <b>Du bist auf Level {{thislevel}}.</b> Um zum nächsten Level
-      aufzusteigen, löse die folgende Aufgabe und trage den
-      Ergebniscode ein:
+      Your last answer <b>{{wronganswer}}</b> is wrong. Try again:
     </p>
+    {% endif %}
     <p>
-      Aufgabe für Level {{nextlevel}}: {{aufgabe}}
+      <b>{{aufgabe}}</b>
     </p>
     <form method="POST">
-      <label for="secret">Lösungsbuchstaben für Level {{nextlevel}}:</label>
+      <label for="secret">Three checkpoint letters for level {{nextlevel}}:</label>
+      <input type="hidden" name="level" value="{{thislevel}}">
       <input type="text" id="secret" name="secret" pattern="[A-Za-z]{3}"
-	     title="Drei Buchstaben" size="3">
-      <input type="submit" id="cta" value="Absenden!">
+	     title="three letters" size="3">
+      <input type="submit" id="cta" value="Solve!">
     </form>
     <p color="red">{{debug}}</p>
   </body>
