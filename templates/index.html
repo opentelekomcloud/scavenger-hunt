@@ -1,31 +1,131 @@
 <!DOCTYPE html>
-<html dir="ltr">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="description" content="Open Telekom Cloud scavenger hunt for the tenth anniversary of the OpenStack Foundation"/>
-    <meta name="keywords" content="Open Telekom Cloud, OpenStack, Anniversary, Scavenger, Hunt"/>
-    <style type="text/css">
-      html{ font-family: TeleGroteskNext,Helvetica Neue,Helvetica,Arial,sans-serif; }
-      body{ margin: 20px;
-            background: rgb(226, 0, 116);
-            color: white;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14pt;
-            text-align: left;
-            line-height: 20pt;
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Open Telekom Cloud scavenger hunt for the tenth anniversary of the OpenStack Foundation" />
+  <meta name="keywords" content="Open Telekom Cloud, OpenStack, Anniversary, Scavenger, Hunt" />
+  <title>Open Telekom</title>
+  <style type="text/css">
+    @font-face {
+    font-family: 'TeleGroteskNext';
+    src: url(data:application/font-woff2;charset=utf-8;base64,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
+         url(data:application/font-woff;charset=utf-8;base64,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
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+    html {
+      font-family: "TeleGroteskNext", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      color: #383838;
+      font-size-adjust: inherit;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 2rem 1rem 1rem 1rem;
+      text-align: left;
+      font-style: normal;
+      font-size: 1rem;
+      line-height: 1.428571429;
+      background-color: #ededed;
+      color: #6c6c6c;
+    }
+
+    a {
+      background-color: transparent;
+    }
+
+    h1 {
+      font-size: 20pt;
+      font-weight: 800;
+      margin: 0.75em 0px;
+    }
+
+    img {
+      border: 10px;
+      width: 20%;
+      padding: 20px;
+    }
+    input#cta {
+      color: #fff;
+      background-color: #e20074;
+      border-color: #bc0060;
+      text-decoration: none;
+      transition: all .15s cubic-bezier(.445,.05,.55,.95);
+      background-image: none;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.2;
+      padding: 6px 23px 7px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    input#cta:hover {
+      color: #fff;
+      background-color: #af005a;
+      border-color: #7f0041;
+      text-decoration: none;
+    }
+    h3 {
+      margin: 0 0 36px;
+      padding: 0;
+      line-height: 24px;
+      font-size: 1rem;
+    }
+    label {
+      display: inline-block;
+      width: auto;
+    }
+    input {
+      background-color: #fff;
+      border: 1px solid #b2b2b2;
+      border-radius: 4px;
+      color: #383838;
+      display: inline-block;
+      font-size: 18px;
+      line-height: 1.2;
+      padding: 6px 11px 7px;
+      width: auto;
+      -webkit-appearance: none;
+      transition: all .15s cubic-bezier(.445,.05,.55,.95);
+    }
+    input:hover {
+      background-color: #ededed;
+    }
+
+    @media screen and (max-width: 480px) {
+      iframe  html {
+        min-height: 350px;
       }
-      a{ background-color: transparent; }
-      h1{ font-size: 20pt; font-weight: 800; margin: 0.75em 0px; }
-      img{ border: 10px;
-           width: 20%;
-           padding: 20px;
+      form label[for=secret] {
+        display: block;
+        margin-bottom: 1rem;
       }
-    </style>
-  </head>
-  <body>
+      form input#secret {
+        margin-right: .2rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
     <p>
-      <b>You are currently on level {{thislevel}}.</b>
+      <h3>You are currently on level {{thislevel}}.</h3>
     </p>
     <p>
       To proceed to the next level, solve this challenge, identify the
@@ -43,10 +143,12 @@
     <form method="POST">
       <label for="secret">Three checkpoint letters for level {{nextlevel}}:</label>
       <input type="hidden" name="level" value="{{thislevel}}">
-      <input type="text" id="secret" name="secret" pattern="[A-Za-z]{3}"
-	     title="three letters" size="3">
+      <input type="text" id="secret" name="secret" pattern="[A-Za-z]{3}" title="three letters" size="3">
       <input type="submit" id="cta" value="Solve!">
     </form>
-    <p color="red">{{debug}}</p>
-  </body>
+    <p color="red"></p>
+  </div>
+  
+</body>
+
 </html>
