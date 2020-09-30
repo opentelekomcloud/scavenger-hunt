@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Open Telekom Cloud scavenger hunt for the tenth anniversary of the OpenStack Foundation"/>
+    <meta name="keywords" content="Open Telekom Cloud, OpenStack, Anniversary, Scavenger, Hunt"/>
+    <style type="text/css">
+      html{ font-family: TeleGroteskNext,Helvetica Neue,Helvetica,Arial,sans-serif; }
+      body{ margin: 20px;
+            background: rgb(226, 0, 116);
+            color: white;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14pt;
+            text-align: left;
+            line-height: 20pt;
+      }
+      a{ background-color: transparent; }
+      h1{ font-size: 20pt; font-weight: 800; margin: 0.75em 0px; }
+      img{ border: 10px;
+           width: 20%;
+           padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Congratulations!</h1>
+    <p>
+      You solved all the levels and proved you know your way around
+      the most important Open Telekom Cloud websites. Thanks for
+      participating in the OpenStack scavenger hunt. We reward you
+      with the a secret password that enables you to participate in
+      the raffle:
+    </p>
+    <p>
+      Your secret password is <b>{{secretkey}}</b>.
+    </p>
+    <form method="GET" action="https://google.com/?q={{secretkey}}" target="_blank">
+      <input type="submit" value="Participate in the raffle!" style="align:center">
+    </form>
+  </body>
+</html>
