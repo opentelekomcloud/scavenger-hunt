@@ -52,7 +52,7 @@
       width: 20%;
       padding: 20px;
     }
-    input#cta {
+    input#solve {
       color: #fff;
       background-color: #e20074;
       border-color: #bc0060;
@@ -73,7 +73,7 @@
       vertical-align: middle;
       white-space: nowrap;
     }
-    input#cta:hover {
+    input#solve:hover {
       color: #fff;
       background-color: #af005a;
       border-color: #7f0041;
@@ -134,7 +134,7 @@
       Your secret password is <b>{{secretkey}}</b>.
     </p>
     <form method="GET" action="https://google.com/?q={{secretkey}}" target="_blank">
-      <input type="submit" value="Participate in the raffle!" style="align:center">
+      <input type="submit" value="Participate in the raffle!" id="solve">
     </form>
   </body>
 </html>
