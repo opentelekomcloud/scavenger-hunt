@@ -123,27 +123,43 @@
 </head>
 
 <body>
+  {% if debug is defined and debug|length%}
+  <p style="color: red"><b>debug:</b>
+    <ul>
+      {% for ditem in debug %}
+        <li>{{ ditem | safe }}</li>
+      {% endfor %}
+    </ul>
+  </p>
+  {% endif %}
+
   <div class="wrapper">
     <p>
-      <h3>You are currently on level {{thislevel}}.</h3>
+      <h3>You are currently on level {{level + 1}}.</h3>
     </p>
     <p>
       To proceed to the next level, solve this challenge, identify the
       three checkpoint letters and enter the letters in this form. The
       answer is case insensitive.
     </p>
-    {% if wronganswer is string %}
+    {% if answer is string %}
     <p>
-      Your last answer <b>{{wronganswer}}</b> is wrong. Try again:
+      <b>{{answer}}</b>
     </p>
     {% endif %}
     <p>
       <b>{{aufgabe}}</b>
     </p>
     <form method="POST">
-      <label for="secret">Three checkpoint letters for level {{nextlevel}}:</label>
-      <input type="hidden" name="level" value="{{thislevel}}">
-      <input type="text" id="secret" name="secret" pattern="[A-Za-z]{3}" title="three letters" size="3">
+      <label for="secret">Three checkpoint letters for level {{level + 2}}:</label>
+      <input type="hidden" name="level" value="{{level}}">
+      <input type="text"
+	     id="secret"
+	     name="secret"
+	     pattern="[A-Za-z]{3}"
+	     title="three letters"
+	     size="3"
+	     autofocus>
       <input type="submit" id="cta" value="Solve!">
     </form>
     <p color="red"></p>
